@@ -1,0 +1,72 @@
+{
+  "name": "@niftykit/widgets",
+  "version": "0.2.13",
+  "description": "NiftyKit Web Components",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/widgets/widgets.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niftykit-inc/niftykit-sdk.git",
+    "directory": "packages/widgets"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "dependencies": {
+    "@material/button": "^14.0.0",
+    "@material/circular-progress": "^14.0.0",
+    "@material/dialog": "^14.0.0",
+    "@material/ripple": "^14.0.0",
+    "@material/select": "^14.0.0",
+    "@niftykit/diamond": "^0.2.9",
+    "@stencil/core": "^4.8.2",
+    "@wagmi/chains": "^1.8.0",
+    "@wagmi/core": "^1.4.12",
+    "@web3modal/wagmi": "^3.5.0",
+    "dotenv": "^16.3.1",
+    "eth-rpc-errors": "^4.0.3",
+    "ethers": "5.7.2",
+    "viem": "^1.19.15"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@stencil/sass": "^3.0.7",
+    "@stencil/store": "^2.0.11",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.11",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "puppeteer": "^21.0.3",
+    "rollup-plugin-polyfill-node": "^0.12.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "NiftyKit",
+    "sdk",
+    "diamond",
+    "web3",
+    "ethers",
+    "widgets",
+    "web components"
+  ],
+  "author": "NiftyKit <hello@niftykit.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/niftykit-inc/niftykit-sdk",
+  "gitHead": "79520f2821f766287a7d5dfe6a74a9897411f382"
+}

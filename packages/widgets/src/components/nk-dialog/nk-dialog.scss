@@ -1,0 +1,32 @@
+@use "@material/theme"with ($primary: #fff,
+);
+
+@use "@material/typography"with ($font-family: unquote("Chivo, Roboto, sans-serif"),
+  $styles-subtitle1: (text-transform: uppercase,
+    font-size: 14px,
+    font-style: 0.875rem,
+    font-weight: bold,
+    line-height: 1.75,
+    letter-spacing: 0.4px,
+  ));
+
+@use "@material/button/styles";
+@use "@material/dialog";
+
+@include dialog.core-styles;
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700&display=swap');
+
+:host {
+  display: block;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 400;
+}
+
+.mdc-button {
+  min-height: 36px;
+
+  .mdc-button__label {
+    color: #000;
+  }
+}

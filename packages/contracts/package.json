@@ -1,0 +1,46 @@
+{
+  "name": "@niftykit/contracts",
+  "version": "0.2.1",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "umd:main": "dist/umd/index.js",
+  "types": "dist/types/index.d.js",
+  "description": "Typechain types for Niftykit contracts",
+  "license": "MIT",
+  "keywords": [
+    "NiftyKit",
+    "sdk",
+    "typechain types",
+    "web3",
+    "ethers"
+  ],
+  "scripts": {
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
+    "build": "yarn run build:cjs && yarn run build:esm && yarn run build:umd && yarn run build:types",
+    "build:cjs": "node tools/cleanup cjs && tsc -p config/tsconfig.cjs.json",
+    "build:esm": "node tools/cleanup esm && tsc -p config/tsconfig.esm.json",
+    "build:umd": "node tools/cleanup umd && webpack --config config/webpack.config.js",
+    "build:types": "node tools/cleanup types && tsc -p config/tsconfig.types.json"
+  },
+  "dependencies": {
+    "ethers": "^5.7.2"
+  },
+  "author": "NiftyKit <hello@niftykit.com>",
+  "homepage": "https://github.com/niftykit-inc/niftykit-sdk",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:niftykit-inc/niftykit-sdk.git",
+    "directory": "packages/contracts"
+  },
+  "bugs": {
+    "url": "https://github.com/niftykit-inc/niftykit-sdk/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist"
+  ],
+  "gitHead": "79520f2821f766287a7d5dfe6a74a9897411f382"
+}
